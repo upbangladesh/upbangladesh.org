@@ -753,54 +753,26 @@ Chief Initiator, United Peoples Bangladesh
         <!--Footer Area End-->
 
     </div>
-    <!-- Body main wrapper end -->
 
-    <!-- JS -->
-
-    <!-- jQuery JS
-============================================ -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <!-- Bootstrap JS
-============================================ -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Plugins JS
-============================================ -->
     <script src="plugins.js"></script>
-    <!-- Ajax Mail JS
-============================================ -->
     <script src="ajax-mail.js"></script>
-    <!-- Main JS
-============================================ -->
     <script src="main.js"></script>
     <script>
         $(".more-detils").click(function(){
             $(".details").toggleClass("d-none");
         });
-        const form = document.getElementById('contactForm');
-
-        form.addEventListener('submit', function(e) {
-          e.preventDefault();
-
-          const data = {
-            name: form.name.value,
-            email: form.email.value,
-            message: form.message.value
-          };
-
-          fetch('YOUR_WEB_APP_URL_HERE', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(data)
-          })
-          .then(res => res.json())
-          .then(response => {
-            // status.textContent = 'Form submitted successfully!';
-            form.reset();
-          })
-          .catch(error => {
-            // status.textContent = 'Error submitting form.';
-            console.error(error);
-          });
+        const form = document.getElementById('contact-form');
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const formData = new FormData(form);
+            fetch('https://docs.google.com/forms/d/e/1FAIpQLSczAxkgcYluNmmMJ_66nf6aPu40IS6crPAuysIA2Krg6bPJrA/formResponse', {
+              method: 'POST',
+              body: formData,
+            })
+              .then(response => console.log('Success!', response))
+              .catch(error => console.error('Error!', error.message));
         });
     </script>
 </body>
