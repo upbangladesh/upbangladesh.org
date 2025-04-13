@@ -721,13 +721,21 @@ Chief Initiator, United Peoples Bangladesh
                         <!--Footer Widget Contact Form-->
                         <div class="footer-widget col-lg-5 col-12 mb-40">
                             <h4>GET IN TOUCH</h4>
-                            <form id="contact-form" action="https://docs.google.com/forms/d/e/1FAIpQLSczAxkgcYluNmmMJ_66nf6aPu40IS6crPAuysIA2Krg6bPJrA/formResponse" method="post">
-                                <div class="input-box-2">
-                                    <div class="input-box"><input name="YPqjbf" type="text" placeholder="your name"></div>
-                                    <div class="input-box"><input name="YPqjbf" type="email" placeholder="your email"></div>
+                            <form id="contact-form">
+                              <div class="input-box-2">
+                                <div class="input-box">
+                                  <input name="entry.1850028484" type="text" placeholder="Your name" required>
                                 </div>
-                                <div class="input-box"><textarea name="YPqjbf" placeholder="your massage"></textarea></div>
-                                <div class="input-box"><input type="submit" value="submit"></div>
+                                <div class="input-box">
+                                  <input name="entry.450628556" type="email" placeholder="Your email" required>
+                                </div>
+                              </div>
+                              <div class="input-box">
+                                <textarea name="entry.455914715" placeholder="Your message" required></textarea>
+                              </div>
+                              <div class="input-box">
+                                <input type="submit" value="Submit">
+                              </div>
                             </form>
                             <p class="form-messege"></p>
                         </div>
@@ -764,17 +772,35 @@ Chief Initiator, United Peoples Bangladesh
             $(".details").toggleClass("d-none");
         });
         const form = document.getElementById('contact-form');
-        form.addEventListener('submit', (e) => {
-            e.preventDefault();
-            const formData = new FormData(form);
-            fetch('https://docs.google.com/forms/d/e/1FAIpQLSczAxkgcYluNmmMJ_66nf6aPu40IS6crPAuysIA2Krg6bPJrA/formResponse', {
-              method: 'POST',
-              mode: 'no-cors', // Disables CORS
-              body: formData,
-            })
-              .then(response => console.log('Success!', response))
-              .catch(error => console.error('Error!', error.message));
-        });
+  const successMessage = document.querySelector('.form-messege'); // For user feedback
+
+  form.addEventListener('submit', (e) => {
+    e.preventDefault(); // Prevent default form submission
+
+    // Clear previous messages
+    successMessage.textContent = '';
+
+    const formData = new FormData(form);
+    console.log([...formData.entries()]); // Log form data for debugging
+
+    fetch('https://docs.google.com/forms/u/0/d/e/1FAIpQLSczAxkgcYluNmmMJ_66nf6aPu40IS6crPAuysIA2Krg6bPJrA/formResponse', {
+      method: 'POST',
+      mode: 'no-cors', // Required to avoid CORS error
+      body: formData,
+    })
+      .then((feedback) => {
+        successMessage.textContent = 'Form submitted successfully!';
+        successMessage.style.color = 'green';
+        console.log(feedback);
+
+        // form.reset(); // Clear the form
+      })
+      .catch((error) => {
+        successMessage.textContent = 'Error submitting form. Please try again.';
+        successMessage.style.color = 'red';
+        console.error('Error:', error.message);
+      });
+  });
     </script>
 </body>
 
