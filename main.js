@@ -98,19 +98,7 @@ galleryGrid.imagesLoaded( function() {
       }
     });
 });
-/*--
-	MailChimp
------------------------------------*/
-function mailChimpResponse(resp) {
-	
-	if (resp.result === 'success') {
-		$('.mailchimp-success').html('' + resp.msg).fadeIn(900);
-		$('.mailchimp-error').fadeOut(400);
-		
-	} else if(resp.result === 'error') {
-		$('.mailchimp-error').html('' + resp.msg).fadeIn(900);
-	}  
-}
+
 /*--
 	Magnific Popup
 -----------------------------------*/
