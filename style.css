@@ -2927,7 +2927,7 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
 /*  11.  Footer Area
 /*----------------------------------------*/
 .footer-area {
-  background-image: url("img/footer.jpg");
+  background-color:#075e55;
 }
 
 /*Footer Top*/
@@ -2938,7 +2938,7 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
   letter-spacing: 0.5px;
-  color: #fff;
+  color: #53c3b9;
   line-height: 14px;
   padding-bottom: 22px;
   margin-bottom: 38px;
@@ -2955,14 +2955,14 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
 
 /*Footer Contact Info*/
 .contact-info p {
-  color: #fff;
+  color: #53c3b9;
   font-family: "Poppins", sans-serif;
   letter-spacing: 0.2px;
   font-weight: 300;
   margin-bottom: 15px;
 }
 .contact-info ul li {
-  color: #fff;
+  color: #53c3b9;
   font-family: "Poppins", sans-serif;
   letter-spacing: 0.2px;
   font-weight: 300;
@@ -2970,7 +2970,7 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
 }
 .contact-info ul li span {
   font-size: 14px;
-  color: #fff;
+  color: #53c3b9;
 }
 
 /*Footer Album*/
@@ -3014,7 +3014,7 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
   top: 50%;
   content: "";
   opacity: 0;
-  color: #fff;
+  color: #53c3b9;
   -webkit-transform: translateX(-50%) translateY(-50%) rotate(-45deg);
   transform: translateX(-50%) translateY(-50%) rotate(-45deg);
   font-size: 24px;
@@ -3067,8 +3067,8 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
   width: 100%;
   float: left;
   background-color: transparent;
-  border: 1px solid #fff;
-  color: #fff;
+  border: 1px solid #53c3b9;
+  color: #53c3b9;
   font-size: 12px;
   font-family: "Poppins", sans-serif;
   padding: 4px 15px;
@@ -3083,9 +3083,9 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
   height: 32px;
   line-height: 26px;
   padding: 3px 35px;
-  color: #fff;
+  color: #53c3b9;
   background-color: transparent;
-  border: 1px solid #fff;
+  border: 1px solid #53c3b9;
   display: inline-block;
   vertical-align: top;
   border-radius: 0;
@@ -3099,7 +3099,7 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
   letter-spacing: 0.5px;
 }
 #contact-form .input-box input[type=submit]:hover {
-  background-color: #fff;
+  background-color: #53c3b9;
   color: #2d3e50;
 }
 
@@ -3116,7 +3116,7 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
   line-height: 24px;
 }
 .copyright p span {
-  color: #fff;
+  color: #53c3b9;
   font-weight: 500;
 }
 .copyright p a {
