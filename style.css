@@ -1,33 +1,4 @@
 @charset "UTF-8";
-/*-----------------------------------------------------------------------------------
-
-    Template Name: Politic
-    Description: Politic - Political HTML5 Template
-    Author: Hastech
-    Version: 2.0
-
------------------------------------------------------------------------------------
-
-    CSS INDEX
-    ===================
-
-    1.   Theme Default CSS
-    2.   Header Area
-	3.   Hero Area
-	4.   About Area
-	5.   Donation Area
-	6.   Event Area
-	7.   Achivment Area
-	8.   Gallery Area
-	9.   Video Newsletter Area
-	10.  Blog Area
-	11.  Footer Area
-
------------------------------------------------------------------------------------*/
-/*----------------------------------------*/
-/*  1.  Theme default CSS
-/*----------------------------------------*/
-/*-- Font Family --*/
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 /*-- Common Style --*/
 body {
@@ -1599,7 +1570,7 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
 }
 .hs-item .hs-image {
   margin-right: 45px;
-  width: 684px;
+  width: 500px;
 }
 @media only screen and (min-width: 1200px) and (max-width: 1600px) {
   .hs-item .hs-image {
@@ -3107,7 +3078,6 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
   padding: 4px 15px;
   height: 32px;
   line-height: 24px;
-  text-transform: capitalize;
 }
 #contact-form .input-box textarea {
   height: 86px;
