@@ -769,6 +769,7 @@ Chief Initiator, United Peoples Bangladesh
             const formData = new FormData(form);
             fetch('https://docs.google.com/forms/d/e/1FAIpQLSczAxkgcYluNmmMJ_66nf6aPu40IS6crPAuysIA2Krg6bPJrA/formResponse', {
               method: 'POST',
+              mode: 'no-cors', // Disables CORS
               body: formData,
             })
               .then(response => console.log('Success!', response))
