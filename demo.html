@@ -589,15 +589,10 @@ Chief Initiator, United Peoples Bangladesh
 
                     <div class="newsletter-form text-center col-12">
                         <form id="mc-form" class="mc-form">
-                            <input id="mc-email" type="email" autocomplete="off" placeholder="Enter email addres" />
+                            <input id="mc-email" name="entry.450628556" type="email" autocomplete="off" placeholder="Enter email addres" />
                             <button id="mc-submit">subscribe</button>
                         </form>
-                        <!-- mailchimp-alerts Start -->
-                        <div class="mailchimp-alerts text-centre">
-                            <div class="mailchimp-submitting"></div><!-- mailchimp-submitting end -->
-                            <div class="mailchimp-success"></div><!-- mailchimp-success end -->
-                            <div class="mailchimp-error"></div><!-- mailchimp-error end -->
-                        </div><!-- mailchimp-alerts end -->
+                        <p class="subscribe-msg"></p>
                     </div>
 
                 </div>
@@ -771,36 +766,61 @@ Chief Initiator, United Peoples Bangladesh
         $(".more-detils").click(function(){
             $(".details").toggleClass("d-none");
         });
+        const newsletter = document.querySelector("#mc-form");
+        const smsg = $(".subscribe-msg");
+        $("#mc-submit").click(function(e){
+            e.preventDefault(); // Prevent default form submission
+
+            // Clear previous messages
+            smsg.html("");
+            const formData = new FormData(newsletter);
+
+            fetch('https://docs.google.com/forms/u/0/d/e/1FAIpQLSe23MyYyBLspKV-qhvI8sR4VIfBzCm_BmQBVLAPqNtUHKK79w/formResponse', {
+              method: 'POST',
+              mode: 'no-cors', // Required to avoid CORS error
+              body: formData,
+            })
+              .then((feedback) => {
+                smsg.html('Form submitted successfully!');
+                smsg.css("color", 'green');
+                console.log(feedback);
+                newsletter.reset(); // Clear the form
+              })
+              .catch((error) => {
+                smsg.html('Error submitting form. Please try again.');
+                smsg.css("color", 'red');
+                console.error('Error:', error.message);
+              });
+        })
         const form = document.getElementById('contact-form');
-  const successMessage = document.querySelector('.form-messege'); // For user feedback
+        const successMessage = $('.form-messege'); // For user feedback
 
-  form.addEventListener('submit', (e) => {
-    e.preventDefault(); // Prevent default form submission
+        form.addEventListener('submit', (e) => {
+            e.preventDefault(); // Prevent default form submission
 
-    // Clear previous messages
-    successMessage.textContent = '';
+            // Clear previous messages
+            successMessage.html('');
 
-    const formData = new FormData(form);
-    console.log([...formData.entries()]); // Log form data for debugging
+            const formData = new FormData(form);
+            console.log([...formData.entries()]); // Log form data for debugging
 
-    fetch('https://docs.google.com/forms/u/0/d/e/1FAIpQLSczAxkgcYluNmmMJ_66nf6aPu40IS6crPAuysIA2Krg6bPJrA/formResponse', {
-      method: 'POST',
-      mode: 'no-cors', // Required to avoid CORS error
-      body: formData,
-    })
-      .then((feedback) => {
-        successMessage.textContent = 'Form submitted successfully!';
-        successMessage.style.color = 'green';
-        console.log(feedback);
-
-        // form.reset(); // Clear the form
-      })
-      .catch((error) => {
-        successMessage.textContent = 'Error submitting form. Please try again.';
-        successMessage.style.color = 'red';
-        console.error('Error:', error.message);
-      });
-  });
+            fetch('https://docs.google.com/forms/u/0/d/e/1FAIpQLSczAxkgcYluNmmMJ_66nf6aPu40IS6crPAuysIA2Krg6bPJrA/formResponse', {
+              method: 'POST',
+              mode: 'no-cors', // Required to avoid CORS error
+              body: formData,
+            })
+              .then((feedback) => {
+                successMessage.html('Form submitted successfully!');
+                successMessage.css("color", 'green');
+                console.log(feedback);
+                form.reset(); // Clear the form
+              })
+              .catch((error) => {
+                successMessage.html('Error submitting form. Please try again.');
+                successMessage.css("color", 'red');
+                console.error('Error:', error.message);
+              });
+        });
     </script>
 </body>
 
