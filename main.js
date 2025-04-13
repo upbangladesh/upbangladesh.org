@@ -101,13 +101,6 @@ galleryGrid.imagesLoaded( function() {
 /*--
 	MailChimp
 -----------------------------------*/
-$('#mc-form').ajaxChimp({
-	language: 'en',
-	callback: mailChimpResponse,
-	// ADD YOUR MAILCHIMP URL BELOW HERE!
-	url: 'http://themeshaven.us8.list-manage.com/subscribe/post?u=759ce8a8f4f1037e021ba2922&amp;id=a2452237f8'
-
-});
 function mailChimpResponse(resp) {
 	
 	if (resp.result === 'success') {
