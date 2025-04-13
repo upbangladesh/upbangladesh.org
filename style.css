@@ -1061,7 +1061,6 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
 /*  2.  Header Area
 /*----------------------------------------*/
 .header-area {
-  position: absolute;
   left: 0;
   right: 0;
   top: 0;
