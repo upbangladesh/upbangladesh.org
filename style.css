@@ -1261,13 +1261,14 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
 }
 .navbar-header .logo img {
   width: 100%;
+  border-radius: 10px;
 }
 
 /*-- Navbar Toggle --*/
 .navbar-toggle {
   width: 40px;
   height: 40px;
-  background-color: #2d3e50;
+  background-color: #075e55;
   color: #fff;
   border-radius: 0;
   padding: 0;
@@ -1424,7 +1425,13 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
 }
 @media only screen and (max-width: 479px) {
   .hero-area {
-    margin-top: 117px;
+    margin-top:0px;
+  }
+  .navbar-header .logo{
+    padding: 10px 0px;
+  }
+  .navbar-header .logo img{
+    border-radius: 0px;
   }
 }
 
@@ -1561,9 +1568,21 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
 }
 @media only screen and (max-width: 479px) {
   .hs-item .hs-item-wrapper {
-    padding: 25px 0 0;
+    padding: 5px 0;
     width: 300px;
-    margin: 0 auto;
+    margin: 0 auto 50px;
+  }
+  #special-area{
+    padding:20px 0;
+  }
+  #special-area img{
+    max-width: 100%;
+  }
+  #about-area{
+    padding: 50px 0;
+  }
+  .main-menu > nav > ul{
+    background-color: #075e55;
   }
 }
 .hs-item .hs-image {
@@ -1594,8 +1613,8 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
 }
 @media only screen and (max-width: 479px) {
   .hs-item .hs-image {
-    margin-right: 10px;
-    width: 107px;
+    width: 100%;
+    margin: 0 auto;
   }
 }
 .hs-item .hs-image img {
@@ -1806,6 +1825,15 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
     font-size: 12px;
     margin-left: 3px;
   }
+  .slick-initialized .slick-slide{
+    height: auto !important;
+  }
+  .hs-item .hs-content{
+    float: left;
+  }
+}
+.slick-initialized .slick-slide{
+  height: 80vh;
 }
 .hs-item.slick-current .hs-image img {
   -webkit-animation-name: fadeInUp;
