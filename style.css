@@ -1584,6 +1584,9 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
   .main-menu > nav > ul{
     background-color: #075e55;
   }
+  .header-area.stick .header-bottom .navbar-header .logo{
+    padding: 10px 0px 10px;
+  }
 }
 .hs-item .hs-image {
   margin-right: 45px;
