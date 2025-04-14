@@ -875,8 +875,8 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
   line-height: 24px;
   padding: 6px 35px;
   color: #fff;
-  background-color: #2d3e50;
-  border-color: #2d3e50;
+  background-color: #075e55;
+  border-color: #075e55;
   display: inline-block;
   vertical-align: top;
   border-radius: 0;
@@ -888,6 +888,7 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
   font-weight: 400;
   z-index: 1;
   letter-spacing: 0.5px;
+  border-radius:10px;
 }
 .btn:hover {
   background-color: #e03927;
@@ -1150,7 +1151,7 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
 }
 /*-- Header Top --*/
 .header-top {
-  background-color: #2d3e50;
+  background-color: #075e55;
   padding: 15px 0;
 }
 @media only screen and (max-width: 479px) {
