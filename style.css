@@ -1341,33 +1341,33 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
   }
 }
 @media only screen and (max-width: 767px) {
-  .main-menu > nav > ul {
+  .main-menu > ul {
     padding: 15px 0;
     margin: 15px 0;
     background-color: #2d3e50;
   }
 }
-.main-menu > nav > ul > li {
+.main-menu > ul > li {
   display: block;
   float: left;
   margin-left: 35px;
 }
-.main-menu > nav > ul > li:first-child {
+.main-menu > ul > li:first-child {
   margin-left: 0;
 }
 @media only screen and (min-width: 992px) and (max-width: 1200px) {
-  .main-menu > nav > ul > li {
+  .main-menu > ul > li {
     margin-left: 30px;
   }
 }
 @media only screen and (max-width: 767px) {
-  .main-menu > nav > ul > li {
+  .main-menu > ul > li {
     float: none;
     width: 100%;
     margin: 0;
   }
 }
-.main-menu > nav > ul > li > a {
+.main-menu > ul > li > a {
   color: #075e56;
   display: block;
   font-family: "Montserrat", sans-serif;
@@ -1378,33 +1378,33 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
   font-weight: 600;
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
-  .main-menu > nav > ul > li > a {
+  .main-menu > ul > li > a {
     padding: 20px 0;
   }
 }
 @media only screen and (max-width: 767px) {
-  .main-menu > nav > ul > li > a {
+  .main-menu > ul > li > a {
     padding: 7px 30px;
     color: #fff;
   }
 }
 
 @media only screen and (max-width: 767px) {
-  .main-menu > nav > ul > li > a::before {
+  .main-menu > ul > li > a::before {
     display: none;
   }
 }
-.main-menu > nav > ul > li:hover > a {
+.main-menu > ul > li:hover > a {
   color: #e03927;
 }
-.main-menu > nav > ul > li:hover > a::before {
+.main-menu > ul > li:hover > a::before {
   width: 100%;
 }
-.main-menu > nav > ul > li.active > a {
+.main-menu > ul > li.active > a {
   color: #e03927;
   font-weight: 700;
 }
-.main-menu > nav > ul > li.active > a::before {
+.main-menu > ul > li.active > a::before {
   width: 100%;
 }
 
@@ -1584,7 +1584,7 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
   #about-area{
     padding: 50px 0;
   }
-  .main-menu > nav > ul{
+  .main-menu > ul{
     background-color: #075e55;
   }
   .header-area.stick .header-bottom .navbar-header .logo{
