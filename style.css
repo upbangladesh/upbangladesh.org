@@ -1080,7 +1080,7 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
           box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
 }
 .header-area.stick .header-bottom .navbar-header .logo {
-  padding: 25px 30px;
+  padding: 5px 0px;
   width: 180px;
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
@@ -1374,7 +1374,7 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
   line-height: 24px;
   text-transform: uppercase;
   position: relative;
-  padding: 40px 0;
+  padding: 25px 0;
   font-weight: 600;
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
