@@ -47,76 +47,8 @@
     <!-- Body main wrapper start -->
     <div class="wrapper fix">
 
-        <!--Header Area Start-->
-        <div class="header-area">
-
-            <!--Header Top Start-->
-            <div class="header-top">
-                <div class="container">
-                    <div class="row">
-
-                        <!--Header Social-->
-                        <div class="header-social text-left col-sm-5 col-xs-12">
-                            <a href="https://facebook.com/UPBangladesh24"><i class="zmdi zmdi-facebook"></i></a>
-                            <a href="https://x.com/UPBangladesh24"><i class="zmdi zmdi-twitter"></i></a>
-                            <a href="https://instagram.com/UPBangladesh24"><i class="zmdi zmdi-instagram"></i></a>
-                        </div>
-
-                        <!--Header Info-->
-                        <div class="header-info text-right col-sm-7 col-xs-12">
-                            <p>Eamil: <a href="mailto:upbangladesh24@gmail.com"> upbangladesh24@gmail.com </a> </p>
-                            <p> <strong>Under Maintenance</strong> </p>
-
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-            <!--Header Top End-->
-
-            <!--Header Bottom Start-->
-            <div class="header-bottom">
-                <div class="container">
-                    <div class="row justify-content-between flex-column flex-lg-row position-relative">
-                        <div class="col-auto">
-                            <!--Header Logo Start-->
-                            <div class="navbar-header d-flex justify-content-between">
-                                <a href="index.html" class="logo navbar-brand"><img src="logo.jpg" alt="logo" style="border-radius:10px"></a>
-                                <button class="navbar-toggle collapsed d-block d-md-none" data-bs-toggle="collapse" data-bs-target="#main-menu">
-                                    <i class="zmdi zmdi-menu menu-open"></i>
-                                    <i class="zmdi zmdi-close menu-close"></i>
-                                </button>
-                            </div>
-                            <!--Header Logo End-->
-                        </div>
-                        <div class="col-auto d-flex flex-md-row flex-lg-row-reverse">
-                            <!--Header Donation Button-->
-                            <div class="header-donation">
-                                <a class="btn" data-scroll href="#donation-area">Join Today</a>
-                            </div>
-                            <!--Header Search End-->
-
-                            <!--Main Menu Start-->
-                            <div class="main-menu collapse" id="main-menu">
-                                <nav>
-                                    <ul>
-                                        <li class="active"><a href="#hero-area">home</a></li>
-                                        <li><a href="#about-area">about</a></li>
-                                        <li><a href="#event-area">event</a></li>
-                                        <li><a href="#gallery-area">gallery</a></li>
-                                        <li><a href="#blog-area">blog</a></li>
-                                        <li><a href="#footer-area">contact us</a></li>
-                                    </ul>
-                                </nav>
-                            </div>
-                            <!--Main Menu End-->
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!--Header Bottom End-->
-        </div>
-        <!--Header Area End-->
+        <!-- Header Area -->
+        <div id="header"></div>
 
         <!--Hero Area Start-->
         <div id="hero-area" class="hero-area section">
@@ -1650,6 +1582,13 @@ Chief Initiator, United Peoples Bangladesh
         $(".more-detils").click(function(){
             $(".details").toggleClass("d-none");
         });
+        fetch('header.html')
+        .then(res => res.text())
+        .then(data => {
+            console.log(data);
+            document.getElementById('header').innerHTML = data;
+        });
+
         const newsletter = document.querySelector("#mc-form");
         const smsg = $(".subscribe-msg");
 

@@ -64,56 +64,7 @@
     <!-- Main Wrapper -->
     <div class="wrapper fix">
         <!-- Header Area -->
-        <header class="header-area">
-            <!-- Header Top -->
-            <div class="header-top">
-                <div class="container">
-                    <div class="row">
-                        <!-- Social Links -->
-                        <div class="header-social text-left col-sm-5 col-xs-12">
-                            <a href="https://facebook.com/UPBangladesh24" aria-label="Follow us on Facebook"><i class="zmdi zmdi-facebook"></i></a>
-                            <a href="https://x.com/UPBangladesh24" aria-label="Follow us on Twitter"><i class="zmdi zmdi-twitter"></i></a>
-                            <a href="https://instagram.com/UPBangladesh24" aria-label="Follow us on Instagram"><i class="zmdi zmdi-instagram"></i></a>
-                        </div>
-                        <!-- Contact Info -->
-                        <div class="header-info text-right col-sm-7 col-xs-12">
-                            <p>Email: <a href="mailto:upbangladesh24@gmail.com">upbangladesh24@gmail.com</a></p>
-                            <p><strong>Under Maintenance</strong></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Header Bottom -->
-            <div class="header-bottom">
-                <div class="container">
-                    <div class="row justify-content-between flex-column flex-lg-row position-relative">
-                        <div class="col-auto">
-                            <!-- Logo -->
-                            <div class="navbar-header d-flex justify-content-between">
-                                <a href="/" class="logo navbar-brand"><img src="logo.jpg" alt="UP Bangladesh Logo"></a>
-                                <button class="navbar-toggle collapsed d-block d-md-none" data-bs-toggle="collapse" data-bs-target="#main-menu" aria-label="Toggle navigation">
-                                    <i class="zmdi zmdi-menu menu-open"></i>
-                                    <i class="zmdi zmdi-close menu-close"></i>
-                                </button>
-                            </div>
-                        </div>
-                        <div class="col-auto d-flex flex-md-row flex-lg-row-reverse">
-                            <!-- Main Menu -->
-                            <nav class="main-menu collapse" id="main-menu">
-                                <ul>
-                                    <li class="active"><a href="#hero-area" aria-current="page">Home</a></li>
-                                    <li><a href="/events">Events</a></li>
-                                    <li><a href="#about-area">About</a></li>
-                                    <li><a href="#footer-area">Contact Us</a></li>
-                                </ul>
-                            </nav>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </header>
-
-      
+        <div id="header"></div>      
 
         <!-- Special Area -->
         <section id="special-area" class="about-area section pb-120 pt-120" aria-labelledby="special-title">
@@ -200,6 +151,12 @@
         $(".more-detils").click(function(){
             $(".details").toggleClass("d-none");
             $(this).addClass("d-none");
+        });
+
+        fetch('header.html')
+        .then(res => res.text())
+        .then(data => {
+            document.getElementById('header').innerHTML = data;
         });
 
         const newsformdata = document.querySelector("#mc-form");
