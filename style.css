@@ -1263,7 +1263,6 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
 }
 .navbar-header .logo img {
   width: 100%;
-  border-radius: 10px;
 }
 
 /*-- Navbar Toggle --*/
