@@ -282,33 +282,6 @@
             document.getElementById('footer').innerHTML = data;
         });
 
-        const newsformdata = document.querySelector("#mc-form");
-        const smsg = $(".subscribe-msg");
-
-        $("#mc-submit").click(function(e){
-            e.preventDefault();
-            smsg.html("");
-            const newsLetterData = new FormData(newsformdata);
-            console.log([...newsLetterData.entries()]);
-
-            fetch('https://docs.google.com/forms/u/0/d/e/1FAIpQLSe23MyYyBLspKV-qhvI8sR4VIfBzCm_BmQBVLAPqNtUHKK79w/formResponse', {
-                method: 'POST',
-                mode: 'no-cors',
-                body: newsLetterData,
-            })
-            .then((feedback) => {
-                smsg.html('Data submitted successfully!');
-                smsg.css("color", 'green');
-                console.log(feedback);
-                newsformdata.reset();
-            })
-            .catch((error) => {
-                smsg.html('Error submitting form. Please try again.');
-                smsg.css("color", 'red');
-                console.error('Error:', error.message);
-            });
-        });
-
         const form = document.getElementById('contact-form');
         const successMessage = $('.form-messege');
 
