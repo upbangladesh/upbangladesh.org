@@ -1152,7 +1152,7 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
 }
 /*-- Header Top --*/
 .header-top {
-  background-color: #82131d;
+  background-color: #eb1f28;
   padding: 15px 0;
 }
 @media only screen and (max-width: 479px) {
@@ -1227,7 +1227,7 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
 
 /*-- Header Bottom --*/
 .header-bottom {
-  background-color: #fff;
+  background-color: #043f3b;
   position: relative;
 }
 
@@ -1368,7 +1368,7 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
   }
 }
 .main-menu > ul > li > a {
-  color: #075e56;
+  color: #fff;
   display: block;
   font-family: "Montserrat", sans-serif;
   line-height: 24px;
@@ -2963,7 +2963,7 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
 /*  11.  Footer Area
 /*----------------------------------------*/
 .footer-area {
-  background-color:#075e55;
+  background-color:#043f3b;
 }
 
 /*Footer Top*/
