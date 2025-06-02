@@ -1239,8 +1239,8 @@ input:-ms-input-placeholder, textarea:-ms-input-placeholder {
   height: auto;
   width: 234px;
   z-index: 1;
-  padding-top: 10px;
-  padding-bottom:10px;
+  padding-top: 2px;
+  padding-bottom: 10px;
 }
 @media only screen and (min-width: 992px) and (max-width: 1200px) {
   .navbar-header .logo {
